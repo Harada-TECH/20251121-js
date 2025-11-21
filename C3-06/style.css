@@ -1,0 +1,64 @@
+@charset "UTF-8";
+html {
+  font-size: 16px;
+}
+.btn-icon {
+  position: relative;
+  padding: 1rem 2.5rem 1rem 1.5rem; /* rem: root em => 16px */
+  border: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #0bd;
+}
+
+.btn-icon::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 4px); /* 高さ半分の位置から矢印の高さの半分を引く */
+  right: 16px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  rotate: 45deg;
+  transition: .5s;
+}
+
+.btn-icon:hover::after {
+  right: 10px;
+}
+
+/* .btn-change */
+.btn-change {
+  width: 180px;
+  position: relative;
+  padding: 1rem 1.5rem;
+  border: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #05b;
+}
+
+.btn-change::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 4px); /* 高さ半分の位置から矢印の高さの半分を引く */
+  right: 16px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  rotate: 45deg;
+  transition: .5s;
+}
+
+.btn-change.done::after {
+  top: calc(50% - 6px);
+  width: 12px;
+  height: 6px;
+  rotate: 125deg;
+}
